@@ -1,0 +1,28 @@
+{
+  "name": "0x00-es6_basic",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "0-constants.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zero": "node 0-main.js",
+    "one": "node 1-main.js",
+    "two": "node 2-main.js",
+    "three": "node 3-main.js",
+    "four": "node 4-main.js",
+    "five": "node 5-main.js",
+    "six": "node 6-main.js",
+    "seven": "node 7-main.js",
+    "eight": "node 8-main.js",
+    "nine": "node 9-main.js",
+    "ten": "node 10-main.js",
+    "eleven": "node 11-main.js",
+    "twelve": "node 12-main.js"
+  },
+  "dependencies": {
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
