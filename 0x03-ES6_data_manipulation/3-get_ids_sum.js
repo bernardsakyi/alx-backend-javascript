@@ -1,7 +1,3 @@
-#!/usr/bin/node
-
-export default function getStudentIdsSum(students){
-    const sum = students.reduce((accumulator, student) => accumulator + student.id, 0);
-    
-    return sum;
+export default function getListStudentIds(array) {
+  return array.reduce((accumulator, i) => accumulator + i.id, 0);
 }

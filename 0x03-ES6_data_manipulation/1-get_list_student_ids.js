@@ -1,10 +1,4 @@
-#!/usr/bin/node
-
-export default function getListStudentIds(arr){
-    if (!Array.isArray(arr)){
-        return [];
-    }
-
-    const ids = arr.map((students) => students.id);
-    return ids;
+export default function getListStudentIds(array) {
+  if (!Array.isArray(array)) return [];
+  return array.map((i) => i.id);
 }
