@@ -1,11 +1,5 @@
-#!/usr/bin/node
-
-"use strict";
-
-function createEmployeesObject(departmentName, employees) {
-  const employeesObject = {};
-  employeesObject[departmentName] = employees;
-  return employeesObject;
+export default function createEmployeesObject(departmentName, employees) {
+  return {
+    [departmentName]: employees,
+  };
 }
-
-export default createEmployeesObject;

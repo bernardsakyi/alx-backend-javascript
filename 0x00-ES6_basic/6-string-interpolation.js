@@ -1,7 +1,3 @@
-#!/usr/bin/node
-
-"use strict";
-
 export default function getSanFranciscoDescription() {
   const year = 2017;
   const budget = {
