@@ -1,46 +1,48 @@
-#!/usr/bin/node
-
+/* eslint-disable consistent-return */
+/* eslint-disable no-underscore-dangle */
 export default class HolbertonCourse {
-    constructor(name, length, students){
-        if (typeof name != 'string' || typeof length != 'number' || !Array.isArray(students)){
-            
-            throw new Error('Invalid attributes. Expected name (string), length (number), and students (array of strings).');
-        }
-        
-        this._name = name;
-        this._length = length;
-        this._students = students;
-    }
+  constructor(name, length, students) {
+    this.name = name;
+    this.length = length;
+    this.students = students;
+  }
 
-    get name(){
-        return this._name;
-    }
+  get name() {
+    return this._name;
+  }
 
-    get length(){
-        return this._length;
+  set name(val) {
+    if (typeof val !== 'string') {
+      throw new TypeError('Name must be a string');
     }
+    this._name = val;
+  }
 
-    get students(){
-        return this.students;
-    }
+  get length() {
+    return this._length;
+  }
 
-    set name(newName){
-        if (typeof newName != 'string'){
-            throw new Error('invalid name. Expected a string.');
-        }
-        this._name = newName;
+  set length(val) {
+    if (typeof val !== 'number') {
+      throw new TypeError('Length must be a number');
     }
+    this._length = val;
+  }
 
-    set length(newLength){
-        if (typeof newLength != 'number'){
-            throw new Error('invalid name. Expected a string.');
-        }
-        this._length = newLength;
-    }
+  get students() {
+    return this._students;
+  }
 
-    set students(newStudents){
-        if (!Array.isArray(newStudents)){
-            throw new Error('invalid name. Expected a string.');
-        }
+  set students(val) {
+    if (!Array.isArray(val)) {
+      throw new TypeError('Students must be an array');
     }
+    // eslint-disable-next-line no-plusplus
+    for (let x = 0; x < val.length; x++) {
+      if (typeof val[x] !== 'string') {
+        throw new TypeError('Students must be an array of strings');
+      }
+    }
+    this._students = val;
+  }
 }

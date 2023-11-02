@@ -1,1 +1,1 @@
-# Ecmascript 6 Classes
+# ES6 Classes

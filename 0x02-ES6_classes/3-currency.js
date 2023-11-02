@@ -1,37 +1,33 @@
-#!/usr/bin/node
+/* eslint-disable no-underscore-dangle */
+export default class Currency {
+  constructor(code, name) {
+    this._code = code;
+    this._name = name;
+  }
 
-export default class Currency{
-    constructor(code, name){
-        if (typeof name != 'string' || typeof code != 'string'){
-            throw new Error('Invalid input format');
-        }
-        this._code = code;
-        this._name = name;
-    }
+  get code() {
+    return this._code;
+  }
 
-    get code(){
-        return this._code;
+  set code(val) {
+    if (typeof val !== 'string') {
+      throw new Error();
     }
+    this._code = val;
+  }
 
-    get name(){
-        return this._name;
-    }
+  get name() {
+    return this._name;
+  }
 
-    set code(newCode){
-        if (typeof newCode != 'string'){
-            throw new Error('Invalid input format');
-        }
-        this._code = newCode;
+  set name(val) {
+    if (typeof val !== 'string') {
+      throw new Error();
     }
+    this._name = val;
+  }
 
-    set name(newName){
-        if (typeof newCode != 'string'){
-            throw new Error('Invalid input format');
-        }
-        this._name = newName;
-    }
-
-    displayFullCurrency(){
-        return (`${this.name} (${this.code})`);
-    }
+  displayFullCurrency() {
+    return `${this.name} (${this.code})`;
+  }
 }
